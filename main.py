@@ -7,24 +7,26 @@ import numpy as np
 import taylor
 
 derivatives = []
+degrees = []
 
 function = input("Enter a function:\nf(x) = ")
 x0 = int(input("x0 = "))
-degree = int(input("Enter the degree of the Taylor polynomial: "))
+while True:
+    degrees.append(int(input("Enter the degree of the Taylor polynomial: "))) 
+    if degrees[-1] == -1:
+        degrees.pop()
+        break
 
 derivative = function
-for i in range(0, degree):
+for i in range(0, max(degrees)):
     derivative = Derivative(derivative, x) 
     derivative = derivative.doit()
     derivatives.append(derivative)
 
-x1 = np.linspace(-15,15,100)
-y1 = lambdify(x, function, 'numpy')(x1)
-if not hasattr(y1, '__len__'):
-    k = y1
-    y1 = np.array([])
-    for i in range(0, len(x1)):
-        y1 = np.append(y1, k)
-plt.plot(x1, y1, label=function)
-taylor_polynomial = taylor.formPolynomial(function, derivatives, degree, x0)
-graph(taylor_polynomial, degree)
+for i in range(0, len(degrees)):
+    graph(taylor.formPolynomial(function, derivatives, degrees[i], x0), degrees[i])
+graph(eval(function), string=function)
+plt.gca().set_aspect('equal', adjustable='datalim')
+plt.axes().grid()
+plt.legend()
+plt.show()
