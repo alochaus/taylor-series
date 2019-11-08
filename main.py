@@ -10,7 +10,7 @@ derivatives = []
 degrees = []
 
 function = input("Enter a function:\nf(x) = ")
-x0 = int(input("x0 = "))
+a = int(input("a = "))
 while True:
     degrees.append(int(input("Enter the degree of the Taylor polynomial: "))) 
     if degrees[-1] == -1:
@@ -24,7 +24,7 @@ for i in range(0, max(degrees)):
     derivatives.append(derivative)
 
 for i in range(0, len(degrees)):
-    graph(taylor.formPolynomial(function, derivatives, degrees[i], x0), degrees[i])
+    graph(taylor.formPolynomial(function, derivatives, degrees[i], a), degrees[i])
 graph(eval(function), string=function)
 plt.gca().set_aspect('equal', adjustable='datalim')
 plt.axes().grid()
