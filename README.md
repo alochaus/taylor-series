@@ -34,12 +34,12 @@ You can use the following trigonometric functions inside your function:
 **Step 3: enter the the degree of the Taylor polynomial**
 
 Enter the degree of each polynomial one at a time.
-In order to finally plot the graph end it with a -1, so that the program knows it is ready.
+In order to finally plot the graph, end it with a -1 so that the program knows it is ready.
 
 ```bash
 $ ./Desktop/taylor-series/main.py 
 Enter a function:
-f(x) = tan(cos(x)-2\*sin(x/2))
+f(x) = tan(cos(x)-2*sin(x/2))
 a = 3
 Enter the degree of the Taylor polynomial: 3
 Enter the degree of the Taylor polynomial: 5
