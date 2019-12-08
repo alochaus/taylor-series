@@ -3,6 +3,11 @@ A simple program to visualize Taylor polynomials approximations.
 
 ![screenshot](screenshot.png)
 
+## Dependencies
+- **matplotlib**
+- **numpy**
+- **sympy**
+
 ## How to use
 
 **Step 1: enter a function**
