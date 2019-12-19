@@ -1,5 +1,5 @@
 # taylor-series
-A simple program to visualize Taylor polynomials approximations.
+A simple program to visualize Taylor series approximation.
 
 ![screenshot](screenshot.png)
 
