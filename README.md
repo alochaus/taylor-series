@@ -32,8 +32,8 @@ You can use the following trigonometric functions inside your function:
 
 **Step 2: enter "a"**
 
-*Whats "a"?*
-
+*Whats "**a**"?*
+"**a**" is the starting point of the approximation.
 ![taylor-series](https://wikimedia.org/api/rest_v1/media/math/render/svg/2c2f7091d7b4025fa1eb223e35acc9b18ccb9c9d)
 
 **Step 3: enter the the degree of the Taylor polynomial**
